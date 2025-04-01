@@ -10,11 +10,10 @@ int main()
     {
         int n;
         cin>>n;
-        int result=0, sum=0;
-        while(sum+(result+1)<=n)
+        int result=n/2;
+        if(n%2==1)
         {
                 result++;
-                sum+=result;
         }
         cout<<result<<endl;
     }
