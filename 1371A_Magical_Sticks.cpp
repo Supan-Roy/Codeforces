@@ -10,7 +10,12 @@ int main()
     {
         int n;
         cin>>n;
-        int result = (-1+sqrt(1+8*n))/2;
+        int result=0, sum=0;
+        while(sum+(result+1)<=n)
+        {
+                result++;
+                sum+=result;
+        }
         cout<<result<<endl;
     }
     return 0;
