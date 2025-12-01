@@ -10,16 +10,26 @@ int main()
         int n;
         cin>>n;
         vector<int>a(n);
-        int ans=0;
+        int two=0;
         for(int i=0;i<n;i++){
                 cin>>a[i];
-                ans^=a[i];
+                if(a[i]==2) two++;
         }
-        if(n%2==0){
-                if(ans!=0){
-                        cout<<-1<<endl;
-                }else cout<<a[n-1]<<endl;
-        } else cout<<ans<<endl;
+        int k=0, get=0;
+        for(int i=0;i<n-1;i++){
+                if(a[i]==2){
+                    k++;    
+                } 
+                if(k*2==two){
+                   cout<<i+1<<endl;
+                   get=1;
+                   break;
+                }
+        }
+        if(!get){
+        cout<<-1<<endl;
     }
+    }
+    
     return 0;
 }
